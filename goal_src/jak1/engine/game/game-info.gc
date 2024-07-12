@@ -453,7 +453,20 @@
          ;; make sure any speedrun display is hidden
          (hide-speedrun-display))
        ;; play sound.
-       (if (time-elapsed? (-> this money-pickup-time) (seconds 0.05)) (sound-play "money-pickup"))
+       (if (time-elapsed? (-> this money-pickup-time) (seconds 0.05)) 
+       
+       
+       
+       ;;(play-sound-file (string-append "custom_assets/jak1/SND/fart" (format "~D" (+ (rand-vu-int-count 7) 1)) ".mp3") 50)
+       ;;(play-sound-file (string-append "custom_assets/jak1/SND/fart" (format nil "~D" (+ (rand-vu-int-count 7) 1)) ".mp3") 50)
+       (play-sound-file (string-format "~S~D~S" "custom_assets/jak1/SND/fart" (+ (rand-vu-int-count 7) 1) ".mp3") 50)
+
+
+
+       ;;(sound-play "money-pickup")
+       
+       
+       )
        (set-time! (-> this money-pickup-time)))
      (adjust (-> (the-as target (-> this process)) game) 'money amount source-handle))
     (((pickup-type fuel-cell))
