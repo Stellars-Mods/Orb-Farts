@@ -453,7 +453,7 @@
          ;; make sure any speedrun display is hidden
          (hide-speedrun-display))
        ;; play sound.
-       (when (time-elapsed? (-> this money-pickup-time) (seconds 0.05)) 
+       (if (time-elapsed? (-> this money-pickup-time) (seconds 0.05)) 
        
        
        
