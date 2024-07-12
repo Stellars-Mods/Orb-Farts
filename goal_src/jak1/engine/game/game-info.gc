@@ -458,7 +458,7 @@
        
        
        (play-sound-file (string-format "~S~D~S" "data/custom_assets/jak1/SND/fart" (+ (rand-vu-int-count 7) 1) ".mp3") 50)
-       (play-sound-file (string-format "~S~D~S" "custom_assets/jak1/SND/fart" (+ (rand-vu-int-count 7) 1) ".mp3") 50)
+       ;;(play-sound-file (string-format "~S~D~S" "custom_assets/jak1/SND/fart" (+ (rand-vu-int-count 7) 1) ".mp3") 50)
 
 
        ;;(sound-play "money-pickup")
